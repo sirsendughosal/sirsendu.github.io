@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teaching | Sirsendu Ghosal</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* --- New Light Theme Variables (Matched to Index/Research/Publications Page) --- */
+:root {
+    --bg-light: #f5f8fa; /* Very light gray/off-white */
+    --text-dark: #1f3a5f; /* Deep navy/indigo for main text */
+    --muted-light: #526d88; /* Muted slate for secondary text */
+    --accent: #008c8c; /* Vibrant teal/cyan for accent */
+    --card-light: #ffffff; /* Pure white for sections */
+    --shadow: rgba(0, 0, 0, 0.08); /* Light, subtle shadow (matched to index) */
+    --dull-header-bg: #fdfdfd; /* Extremely light off-white for a dull header effect */
+    color-scheme: light;
+}
+
+/* --- Base Styles (Matched to Index/Research/Publications Page) --- */
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:'Inter', system-ui;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6; /* Increased line-height for readability */
+    font-size: 15px;
+}
+.container{
+    max-width:1000px; /* Matched to Index/Research/Publications page */
+    margin:50px auto; /* Matched to Index/Research/Publications page */
+    padding:0 24px; /* Matched to Index/Research/Publications page */
+}
+
+/* --- Page Title (Simulated from H1 in Index) --- */
+.page-title {
+    margin:0 0 15px 0;
+    font-size:48px; 
+    font-weight: 800;
+    color: var(--text-dark);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); 
+}
+
+/* --- Navigation Styles (Matched to Index/Research/Publications Page) --- */
+nav{
+    display:flex;
+    justify-content:center; /* Centered nav */
+    gap:12px;
+    margin:30px 0; /* Increased margin */
+    flex-wrap:wrap;
+}
+nav a{
+    padding:10px 20px;
+    background-color: transparent;
+    border: 2px solid var(--accent);
+    border-radius:25px;
+    font-weight:600;
+    font-size: 14px;
+    color:var(--accent);
+    text-decoration:none;
+    transition:all .3s ease;
+}
+nav a:hover{
+    background-color:var(--accent);
+    color:white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+/* --- Section/Card Styles (Matched to Index/Research/Publications Page) --- */
+.section{
+    margin-top:30px;
+    background:var(--card-light);
+    padding:30px;
+    border-radius:12px;
+    box-shadow: 0 5px 15px var(--shadow);
+    border-left: 5px solid var(--accent);
+    border-right: 5px solid var(--accent);
+    overflow: hidden; 
+}
+.section h2{
+    /* Main Section Header Styling */
+    margin-top: -30px; 
+    margin-bottom: 15px; 
+    font-size: 24px;
+    font-weight: 700;
+    
+    /* Header background and positioning for top alignment */
+    background-color: var(--dull-header-bg); 
+    padding: 10px 15px; 
+    margin-left: -30px; 
+    margin-right: -30px; 
+    border-radius: 12px 12px 0 0; 
+    border-bottom: 1px solid var(--bg-light);
+    color: var(--text-dark);
+    padding-bottom: 10px; 
+    padding-left: 30px;
+}
+
+/* --- Paragraphs and Lists (Content Sections) --- */
+p {
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+ul{
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    padding: 6px 0;
+    border-bottom: none; /* Removed dashed line */
+    color: var(--text-dark);
+    font-size: 14px; /* Matched list font size to research/pub pages */
+    position: relative;
+    padding-left: 15px; 
+}
+ul li::before {
+    content: "★"; /* Custom star bullet point for awards */
+    color: var(--accent);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+    top: 6px; /* Adjust vertical position */
+}
+ul li:last-child {
+    border-bottom: none;
+}
+
+/* --- NEW: Media Coverage Gallery Styling --- */
+.media-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+}
+.media-item {
+    flex: 1 1 45%; /* Allow two items per row */
+    max-width: 480px;
+    border: 1px solid #e0e6ec;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+.media-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    .media-item {
+        flex: 1 1 100%; /* Stack items on small screens */
+    }
+}
+
+/* --- Footer Styling (Added for consistency) --- */
+footer{
+    margin-top:50px;
+    padding:20px;
+    color:var(--muted-light);
+    font-size:13px;
+    text-align:center;
+    border-top:1px solid #e0e6ec;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1 class="page-title">Teaching & Awards 🏆</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="teaching.html">Teaching</a>
+</nav>
+
+<div class="section">
+    <h2>Teaching Experience</h2>
+    <p>
+        <strong>Institute:</strong> National Forensic Science University, Guwahati Campus (NFSU)<br>
+        <strong>Position:</strong> Guest lecturer<br>
+        <strong>Duration:</strong> July 2025 – Present<br>
+        <strong>Course:</strong> Engineering Physics
+    </p>
+</div>
+
+<div class="section">
+    <h2>Awards & Achievements</h2>
+    <ul>
+    <li><strong>INSPIRE Fellowship</strong> (2014–2019) (<i>DST, Government of India</i>)</li>
+    <li><strong>Swami Vivekananda Merit Cum Scholarship</strong> (2012) (<i>Government of West Bengal, India</i>)</li>
+    <li><strong>Best Poster Award</strong> (<i>FINS 2024, IIT Guwahati</i>)</li>
+    <li><strong>GATE 2020:</strong> <i>AIR 237</i></li>
+    <li><strong>JEST 2020:</strong> <i>AIR 148</i></li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>Research in the News 📰</h2>
+    
+    <div class="media-gallery">
+        <div class="media-item">
+            <img src="News2.jpg" alt="News Coverage: IIT Guwahati Engineers Sustainable Solution for Wastewater and Oil Spill Treatment">
+        </div>
+        <div class="media-item">
+            <img src="News1.JPG" alt="News Coverage: IIT Guwahati Researchers Create Innovative Cost-Effective Photodetector">
+        </div>
+    </div>
+    
+</div>
+
+<footer>
+    © Sirsendu Ghosal — IIT Guwahati • Built with HTML & CSS
+</footer>
+</div>
+</body>
+</html>

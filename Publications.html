@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications | Sirsendu Ghosal</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* --- New Light Theme Variables (from Index/Research Page) --- */
+:root {
+    --bg-light: #f5f8fa; /* Very light gray/off-white */
+    --text-dark: #1f3a5f; /* Deep navy/indigo for main text */
+    --muted-light: #526d88; /* Muted slate for secondary text */
+    --accent: #008c8c; /* Vibrant teal/cyan for accent */
+    --card-light: #ffffff; /* Pure white for sections */
+    --shadow: rgba(0, 0, 0, 0.08); /* Light, subtle shadow (matched to index) */
+    --dull-header-bg: #fdfdfd; /* Extremely light off-white for a dull header effect */
+    --status-color: #ff5722; /* Orange/red for review status */
+    --name-highlight: #1f3a5f; /* Deep navy/indigo for name highlight */
+    --patent-number-color: #007bff; /* Specific blue for highlighting numbers */
+    color-scheme: light;
+}
+
+/* --- Base Styles (Matched to Index/Research Page) --- */
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:'Inter', system-ui;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6; /* Increased line-height for readability */
+    font-size: 15px;
+}
+.container{
+    max-width:1000px; /* Matched to Index/Research page */
+    margin:50px auto; /* Matched to Index/Research page */
+    padding:0 24px; /* Matched to Index/Research page */
+}
+
+/* --- Navigation Styles (Matched to Index/Research Page) --- */
+nav{
+    display:flex;
+    justify-content:center; /* Centered nav */
+    gap:12px;
+    margin:30px 0; /* Increased margin */
+    flex-wrap:wrap;
+}
+nav a{
+    padding:10px 20px;
+    background-color: transparent;
+    border: 2px solid var(--accent);
+    border-radius:25px;
+    font-weight:600;
+    font-size: 14px;
+    color:var(--accent);
+    text-decoration:none;
+    transition:all .3s ease;
+}
+nav a:hover{
+    background-color:var(--accent);
+    color:white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+/* --- Section/Card Styles (Matched to Index/Research Page) --- */
+.section{
+    margin-top:30px;
+    background:var(--card-light);
+    padding:30px;
+    border-radius:12px;
+    box-shadow: 0 5px 15px var(--shadow);
+    border-left: 5px solid var(--accent);
+    border-right: 5px solid var(--accent);
+    overflow: hidden; 
+}
+.section h2{
+    /* Main Section Header Styling */
+    margin-top: -30px; 
+    margin-bottom: 15px; 
+    font-size: 24px;
+    font-weight: 700;
+    background-color: var(--dull-header-bg); 
+    padding: 10px 15px; 
+    margin-left: -30px; 
+    margin-right: -30px; 
+    border-radius: 12px 12px 0 0; 
+    border-bottom: 1px solid var(--bg-light);
+    color: var(--text-dark);
+    padding-bottom: 10px; 
+    padding-left: 30px;
+}
+
+/* --- Page Title (Simulated from H1 in Index) --- */
+.page-title {
+    margin:0 0 15px 0;
+    font-size:48px; 
+    font-weight: 800;
+    color: var(--text-dark);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); 
+}
+
+/* --- Subsection Headers for Years (NEW) --- */
+h3 {
+    font-size: 18px;
+    color: var(--accent);
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eef2f5;
+    padding-bottom: 3px;
+}
+
+/* --- List (Publications) Styling --- */
+ol, ul {
+    color: var(--text-dark);
+    padding-left: 20px;
+    margin: 0;
+    line-height: 1.6; 
+}
+
+/* Ordered list items (Journal Pubs) */
+ol li {
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    border-bottom: none; 
+    font-size: 14px; 
+    position: relative;
+    padding-left: 10px; 
+}
+
+/* HIGHLIGHT JOURNAL NAMES */
+ol li i {
+    font-style: italic;
+    color: var(--accent); 
+    font-weight: 600; 
+}
+
+/* HIGHLIGHT AUTHOR NAME */
+.author-highlight {
+    font-weight: 800;
+    color: var(--name-highlight);
+}
+
+/* HIGHLIGHT CONFERENCE STATUS (Best Poster Award/International Conf) */
+.conf-highlight {
+    font-weight: 700;
+    color: var(--accent);
+}
+
+/* Styling for the 'Under Revision' and 'Accepted' states */
+.pub-status {
+    color: var(--status-color); 
+    font-weight: 600;
+}
+
+/* Conference list items (Unordered List) */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    padding: 3px 0; 
+    margin-bottom: 3px; 
+    border-bottom: none; 
+    color: var(--text-dark);
+    font-size: 14px;
+    position: relative;
+    padding-left: 15px; 
+}
+/* Custom Bullet Point (Solid Dot) for UL */
+ul li::before {
+    content: "•";
+    color: var(--accent);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em; 
+    position: absolute;
+    left: 0;
+}
+/* Italic styling for content inside parentheses in UL (Conference List) */
+ul li i {
+    font-style: italic;
+    color: var(--muted-light);
+}
+
+/* --- Patent and Conference Section (p) --- */
+p {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    font-size: 14px;
+}
+.patent-number-highlight {
+    color: var(--patent-number-color);
+    font-weight: 700;
+}
+
+/* Footer (Added from Research Page) */
+footer{
+    margin-top:50px;
+    padding:20px;
+    color:var(--muted-light);
+    font-size:13px;
+    text-align:center;
+    border-top:1px solid #e0e6ec;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1 class="page-title">Publications 📰</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="teaching.html">Teaching</a>
+</nav>
+
+<div class="section">
+    <h2>Journal Publications</h2>
+    
+    <h3>2025</h3>
+    <ol>
+    <li><span class="author-highlight">Ghosal, S.</span>, Paul, S., & Giri, P. K. (2025). Enhanced charge transfer and coupled resonance in Ni-doped sub-stoichiometric tungsten oxide nanostructure for plasmon-free SERS sensing. <i>Materials Today Nano</i>, 29, 100593.<a href="https://doi.org/10.1016/j.mtnano.2025.100593">Link</a></li>
+    <li><span class="author-highlight">Ghosal, S.</span>, Nandi, S., & Giri, P. (2025). Recent advances in semiconductor nanostructure-based surface-enhanced Raman scattering sensors. <i>Nanotechnology</i>, 36 202002.<a href="https://doi.org/10.1088/1361-6528/adcbaf">Link</a></li>
+    <li><span class="author-highlight">Ghosal. S.</span>, Sharma S., Nandi, S., Sahu, D. & Giri, P. K. (2025). Understanding Charge Transfer Dynamics and Electromagnetic Enhancement in Ultrasensitive SERS Detection Using Defect rich Nb2O5 Nanosheets Coupled with Plasmonic Nanoparticles: An integrated Experimental and Theoretical Study. <span class="pub-status">(Under Revision, <i>Journal of Materials Chemistry C</i>)</span></li>
+    <li>Nandi, S., <span class="author-highlight">Ghosal, S.</span>, Meyyappan, M., & Giri, P. K. (2025). Defect-engineered 2DBi2Se3based broadband optoelectronic synapses with ultralow energy consumption for neuromorphic computing. <i>Materials Horizons</i>. 12(12), 4274-4288.<a href="https://doi.org/10.1039/D4MH01625D">Link</a></li>
+    <li>Ghosh, K., Roy, S. S., <span class="author-highlight">Ghosal, S.</span>, Sahu, D., & Giri, P. K. (2025). Phosphorous Doped Ti3C2Tx MXene/Carbon Foam Hybrid Aerogel as a Versatile Platform for Industrial Waste Treatment, Strain Sensing and Oil-Water Separation. <i>Carbon</i>, 120258.<a href="https://doi.org/10.1016/j.carbon.2025.120258">Link</a></li>
+    <li>Sarkar, D., Pramanik, J., <span class="author-highlight">Ghosal, S.</span>, Paul, S., Giri, P. K., Datta, A., ... & Ghosh, S. (2025) Synergistic Effect of Atomic‐Scale Interface Engineering and Built‐In Electric Field at S‐Scheme Bi2WO6/ZnIn2S4 Heterojunctions for Photocatalytic Hydrogen Evolution. <i>Small</i>, 2505315.<a href="https://doi.org/10.1002/smll.202505315">Link</a></li>
+    <li>Chouhan, B.S., <span class="author-highlight">Ghosal, S.</span>, Rohith, K.M. et al. Ultra-broadband actively tunable terahertz modulator based on multi-stacked metamaterial. <i>Sci Rep</i> 15, 22748 (2025).<a href="https://doi.org/10.1038/s41598-025-07122-2">Link</a></li>
+    <li>Chahal, R., <span class="author-highlight">Ghosal, S.</span>, Ghosh, J., & Giri, P. K. (2025). Lead-free halide double perovskite nanoflakes as high-performance SERS substrates for detection of trace organic pollutants: chemical enhancement versus electromagnetic enhancement. <i>Nanoscale</i>, 17(15), 9401-9417.<a href="https://doi.org/10.1039/D5NR00437C">Link</a></li>
+    <li>Nandi, S., Das, N. K., <span class="author-highlight">Ghosal, S.</span>, Sahu, D., Meyyappan, M., & Giri, P. K. (2025). 2D Bi2Se3-ZnO nanoparticles heterojunction ultrafast photodetector for enhanced detection in the UV to telecommunication wavelength. <i>Journal of Materials Chemistry C</i>, 6(5).<a href="https://doi.org/10.1039/D5TC01430A">Link</a></li>
+    <li>Bhagwat Singh Chouhan B.S., <span class="author-highlight">Ghosal, S.</span>, Rohith K M, Ray, S., Giri, P.K., Ahmad, A., and Kumar, G. (2025), Tunable Broadband Terahertz Modulation in a Multi-Stacked Toroidal Metamaterial. (<i>Physica Scripta</i>),100, 095541<a href="https://doi.org/10.1088/1402-4896/ae0837">Link</a></li>
+    <li>Aswal. S., <span class="author-highlight">Ghosal. S.</span>, Murari, H., Chahal, R., Biroju R.K., Vretenár, V., Vančo L., Ghosh, S., & Giri, P. K. (2025) Effects of Layer Thickness and Selenium Vacancies in Modulating the Anisotropic In-Plane Thermal Transport in 2D ReSe2: Experiment vs. Theory. <span class="pub-status">(Under Revision, <i>Nanoscale</i>)</span></li>
+    <li>Lavi Kumar Vaswani, Rohith K M, Bhagwat Singh Chouhan, <span class="author-highlight">Sirsendu Ghosal</span>, Anuraj Panwar, P. K. Giri, and Gagan Kumar Dynamic Control of Electromagnetically Induced Transparency Using Thermal Effects via Flexible Terahertz Metasurface. <span class="pub-status">(Under Revision, <i>IEEE Journal of Selected Topics in Quantum Electronics</i>)</span></li>
+    </ol>
+
+    <h3>2024</h3>
+    <ol start="13">
+    <li><span class="author-highlight">Ghosal, S.</span>, Nandi, S., & Giri, P. K. (2024). Defect-Engineered Nb2O5 Nanoparticles for SERS Sensing through Suppressed Phonon-Assisted Recombination at Cryogenic Temperature. <i>ACS Applied Nano Materials</i>, 7(17), 20484-20497.<a href="https://doi.org/10.1021/acsanm.4c03460">Link</a></li>
+    <li><span class="author-highlight">Ghosal, S.</span>, Bora, A., & Giri, P. K. (2024). Evidence of oxygen vacancy-mediated ultrahigh SERS sensitivity of Niobium pentoxide nanoparticles through defect engineering: theoretical and experimental studies. <i>Nanoscale</i>, 16(1), 309-321.<a href="https://doi.org/10.1039/D3NR04112C">Link</a></li>
+    <li>Sahu, D., Debnath, S., <span class="author-highlight">Ghosal, S.</span>, & Giri, P. K. (2024). 2D Printed Plasmonic Nanoparticle Array Incorporated Formamidinium-Based High-Performance Self-Biased Perovskite Photodetector. <i>ACS Applied Materials & Interfaces</i>, 16(37), 49544-49555.<a href="https://doi.org/10.1021/acsami.4c12822">Link</a></li>
+    <li>Debnath, S., <span class="author-highlight">Ghosal, S.</span>, Meyyappan, M., & Giri, P. K. (2024). A fully-printed plasmonic nanoparticle-incorporated ZnO-based UV photodetector with very high responsivity and fast response. <i>Flexible and Printed Electronics</i>, 9(3), 035005.<a href="https://doi.org/10.1088/2058-8585/ad6332">Link</a></li>
+    </ol>
+    
+    <h3>Conference Papers</h3>
+    <ol start="17">
+    <li>Chouhan, B. S., <span class="author-highlight">Ghosal, S.</span>, Giri, P. K., & Kumar, G. (2025, April). Ultra-Wideband Polarization Insensitive Tunable Terahertz Modulator for 6G Communication. In 2025 <i>IEEE Silicon Photonics Conference (SiPhotonics)</i> (pp. 1-2). IEEE.<a href="https://doi.org/10.1109/SiPhotonics64386.2025.10985576">Link</a></li>
+    </ol>
+</div>
+
+<div class="section">
+    <h2>Patent Information</h2>
+    <p>An ultra-broadband actively tunable terahertz modulator based on multistacked metamaterial and a method of preparation. (<strong>Application No.</strong> <span class="patent-number-highlight">202431065</span>, <i>First Examination Stage</i>).</p>
+</div>
+
+<div class="section">
+    <h2>Conferences & Workshops</h2>
+    <ul>
+    <li>Frontiers in Nano-Science (FINS-2024) (<i>IIT Guwahati, 2024, Poster Presentation, <span class="conf-highlight">Best Poster Award</span></i>)</li>
+    <li>EMRS Spring Meeting 2025 (<i>Strasbourg, France, 26-30th May, 2025, Poster Presentation, <span class="conf-highlight">International Conference</span></i>)</li>
+    <li>RESEARCH & INDUSTRIAL CONCLAVE-INTEGRATION’24 (<i>IIT Guwahati, 2024, Guwahati, India</i>)</li>
+    <li>33rd AGM of MRSI and 4th Indian Material Conclave- IUMRS ICA 2022 (<i>IIT Jodhpur, December, 2022</i>)</li>
+    <li>International Conference on Advanced Materials for Better Tomorrow-II (<i>Benaras Hindu University, 2023</i>)</li>
+    <li>1st Online Hands on Training on Density Functional Theory of Advanced Materials (Quantum Espresso) (<i>10th-19th June, 2024</i>)</li>
+    <li>1st Online Hands on Training on Density Functional Theory computation on molecules using Gaussian (DFTG) (<i>30th April-6th May, 2024</i>)</li>
+    <li>Workshop on Neutron Scattering (Elastic and Inelastic) and Muon Spectroscopy (<i>16th-17th February, 2024, Department of Physics, IIT Guwahati</i>)</li>
+    <li>Frontiers in Optics and Terahertz Photonics Workshop (<i>13th May, 2024, Department of Physics, IIT Guwahati</i>)</li>
+    <li>1st DFT-M workshop on molecular modelling at nanoscale (Hands on Training) (<i>7th-13th July, 2023</i>)</li>
+    <li>Indo-US VAJRA Course on “Fundamentals of Electromagnetics” (EMF-2023, 12th-16th June, <i>NIT Silchar, 2023</i>)</li>
+    <li>Workshop on ‘Characterization and Testing of Components Following Laser Materials Processing including Surface Engineering and Additive Manufacturing’ (<i>IIT Kharagpur, 18th-26th March, 2023</i>)</li>
+    </ul>
+</div>
+
+<footer>
+    © Sirsendu Ghosal — IIT Guwahati • Built with HTML & CSS
+</footer>
+</div>
+</body>
+</html>
